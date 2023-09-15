@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VOWELS</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        
+      const question = prompt("Введите строку:");
+
+      function words(data) {
+        let count = 0;
+        const vowels = ["а", "о", "и", "е", "ё", "э", "ы", "у", "ю", "я"];
+        for (let i = 0; i < data.length; i++)
+          for (let item = 0; item < vowels.length; item++)
+            if (data[i] === vowels[item]) {
+              ++count;
+              break;
+            }
+        return count ? count : false;
+      }
+
+      console.log(words(question));
     </script>
-</body>
+  </body>
 </html>
