@@ -10,10 +10,11 @@
       const question = prompt("Введите строку:");
 
       function words(data) {
-        const vowels = ["а", "о","и", "е", "ё", "э", "ы", "у", "ю", "я"];
+        const formated = data.toLowerCase();
+        const vowels = 'аоиеёэыуюя';
         let count = 0;
-        for (let i = 0; i < data.length; i++) {
-          const check = data[i];
+        for (let i = 0; i < formated.length; i++) {
+          const check = formated[i];
           if (vowels.includes(check)) {
             count ++;
           }
